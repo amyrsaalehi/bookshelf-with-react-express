@@ -1,5 +1,10 @@
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './core/App'
+import { BookProvider } from './core/context/Book'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+render(
+  <BookProvider>
+    <App />
+  </BookProvider>
+  , document.getElementById('root'))
